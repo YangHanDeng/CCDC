@@ -108,7 +108,7 @@
 - NS records (nameservers for the zone): 
     - `IN NS [hostnames]`
 - MX records (Mail for Exchange) 
-    - `IN MX \[numeric priority\] \[hostname for SMTP\]`
+    - `IN MX [numeric priority] [hostname for SMTP]`
     - **low number high priority**
 - A records (map hname to ip, for forward zone files): 
     - `[hostname] IN A [ip]`
@@ -121,7 +121,8 @@
 
 ## Client
 
-#### 1. Check network interface: `ip address show to [private ip/private subnet]`
+#### 1. Check network interface: 
+- `ip address show to [private ip/private subnet]`
 #### 2. Configure
     
 1. ubuntu &gt; 18.04 : netplan `sudo vi /etc/netplan/private-nameservers.yaml`
@@ -134,7 +135,7 @@
                         addresses:
                         - [dns-ip1]
                         - [dns-ip2]
-                        search: [ [base domain name] 
+                        search: [ [base domain name] ]
     ```
 2. Ubuntu 16.04 and Debian Clients `sudo vi /etc/network/interfaces`
 	1. find the dns-nameservers line
