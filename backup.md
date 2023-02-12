@@ -6,7 +6,8 @@ It's actually a summary for the practice in 1/14/2023
  * /etc, /var/www/html, /home, /root ....
  
 2. process:
-  * create folder to backup
+ * create folder to backup
+ 
     ** `mkdir /root/backups`
     
     ** `cd backups`
@@ -14,11 +15,13 @@ It's actually a summary for the practice in 1/14/2023
     ** `mkdir etc home usr-bin usr-sbin var-www ...`
     
   * backup with rsync
+  
     ** `rsync -avP [target file] [location]`
     
     ** ex. `rsync -avP /var/www /root/backups/var-www`
     
   * compress backups and encrypt
+  
     ** cd ..
     
     ** `tar czvf backups.tgz backups`
@@ -30,7 +33,9 @@ It's actually a summary for the practice in 1/14/2023
     ** `scp root@ip:/root/backups.tgz.gpg . `
 
 3.So if the system is compromised
+
   * (in another backup computer)
+  
     ** `scp ./backups.tgz.gpg root@ip:/root/backups.tgz.gpg`
     
   * decrypt
