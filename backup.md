@@ -2,10 +2,10 @@
 
 It's actually a summary for the practice in 1/14/2023
 
-1.Things to backup:
+1. Things to backup:
  */etc, /var/www/html, /home, /root ....
  
-2.process:
+2. process:
   * create folder to backup
     ** mkdir /root/backups
     ** cd backups
